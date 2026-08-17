@@ -332,7 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      showToast('Thank you for contacting SYNTINA! Your message has been received.', 'success');
+      showToast('Thank you for contacting SYNTINA INNOTECH! Your message has been received.', 'success');
       contactForm.reset();
     });
   }
@@ -341,7 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (newsletterForm) {
     newsletterForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      showToast('Subscribed to SYNTINA scientific updates!', 'success');
+      showToast('Subscribed to SYNTINA INNOTECH scientific updates!', 'success');
       newsletterForm.reset();
     });
   }
