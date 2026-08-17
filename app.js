@@ -147,12 +147,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderProducts() {
     if (!productGrid) return;
-    
+
     const filtered = products.filter(p => {
       const matchCat = currentCategory === 'all' || p.category === currentCategory;
       const matchSearch = p.title.toLowerCase().includes(searchQuery) ||
-                          p.categoryLabel.toLowerCase().includes(searchQuery) ||
-                          p.shortDesc.toLowerCase().includes(searchQuery);
+        p.categoryLabel.toLowerCase().includes(searchQuery) ||
+        p.shortDesc.toLowerCase().includes(searchQuery);
       return matchCat && matchSearch;
     });
 
