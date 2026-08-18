@@ -47,8 +47,10 @@
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- FontAwesome Icons with SRI Integrity -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
@@ -357,6 +359,7 @@
             <form id="contact-form">
               <input type="hidden" name="_subject" value="New Contact Inquiry - SYNTINA INNOTECH">
               <input type="hidden" name="_captcha" value="false">
+              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
               <div class="form-group">
                 <label class="form-label">Full Name</label>
                 <input type="text" name="name" class="form-input" required placeholder="Dr. Sarah Jenkins">
@@ -401,6 +404,7 @@
       <form id="quote-form">
         <input type="hidden" name="_subject" value="New Quotation Request (RFQ) - SYNTINA INNOTECH">
         <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <div class="form-group">
           <label class="form-label">Select Equipment / Solution</label>
           <select class="form-select" id="quote-product-select" name="product" required>

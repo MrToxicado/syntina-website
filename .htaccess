@@ -1,0 +1,57 @@
+# ==============================================================================
+# SYNTINA INNOTECH - PRODUCTION SECURITY & PERFORMANCE HEADERS
+# ==============================================================================
+
+# 1. PREVENT DIRECTORY BROWSING
+Options -Indexes
+
+# 2. BLOCK ACCESS TO HIDDEN AND SENSITIVE FILES
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "(^#.*#|\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|sw[op]|md)|~)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# 3. HTTP SECURITY HEADERS
+<IfModule mod_headers.c>
+    # Prevent clickjacking / unauthorized iframe framing
+    Header set X-Frame-Options "SAMEORIGIN"
+
+    # Prevent MIME-sniffing
+    Header set X-Content-Type-Options "nosniff"
+
+    # Enforce strict referrer privacy
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Restrict unnecessary browser device APIs
+    Header set Permissions-Policy "geolocation=(), camera=(), microphone=(), payment=()"
+
+    # Enforce HTTPS Strict Transport Security (HSTS)
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+# 4. BROWSER CACHING FOR OPTIMAL PERFORMANCE
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+
+    # CSS and JavaScript
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType text/javascript "access plus 1 year"
+
+    # Images and Media
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+
+    # Fonts
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+</IfModule>
