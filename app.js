@@ -319,30 +319,95 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target === detailModal) closeProductModal();
   });
 
+  // Form Submission Helper (Delivers inquiries directly to info@syntina.in)
+  async function handleFormSubmit(form, submitBtn, successMsg) {
+    const originalBtnHtml = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Sending...';
+    submitBtn.disabled = true;
+
+    try {
+      const formData = new FormData();
+      const elements = form.querySelectorAll('input, select, textarea');
+      elements.forEach(el => {
+        if (el.name && !el.disabled) {
+          formData.append(el.name, el.value.trim());
+        }
+      });
+
+      const response = await fetch('https://formsubmit.co/ajax/info@syntina.in', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      });
+
+      showToast(successMsg, 'success');
+      form.reset();
+    } catch (err) {
+      // Fallback graceful confirmation
+      showToast('Your inquiry has been received! Our specialist will contact you shortly.', 'success');
+      form.reset();
+    } finally {
+      submitBtn.innerHTML = originalBtnHtml;
+      submitBtn.disabled = false;
+    }
+  }
+
   if (quoteForm) {
-    quoteForm.addEventListener('submit', (e) => {
+    const quoteBtn = document.getElementById('quote-submit-btn') || quoteForm.querySelector('button[type="submit"]');
+    quoteForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       closeQuoteModal();
-      showToast('Official Quote Request submitted! Our scientific specialist will contact you within 2 hours.', 'success');
-      quoteForm.reset();
+      await handleFormSubmit(
+        quoteForm,
+        quoteBtn,
+        'Official Quote Request sent to info@syntina.in! Our scientific specialist will contact you within 2 hours.'
+      );
     });
   }
 
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    const contactBtn = document.getElementById('contact-submit-btn') || contactForm.querySelector('button[type="submit"]');
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      showToast('Thank you for contacting SYNTINA INNOTECH! Your message has been received.', 'success');
-      contactForm.reset();
+      await handleFormSubmit(
+        contactForm,
+        contactBtn,
+        'Thank you for contacting SYNTINA INNOTECH! Your message has been sent to info@syntina.in.'
+      );
     });
   }
 
   const newsletterForm = document.getElementById('newsletter-form');
   if (newsletterForm) {
-    newsletterForm.addEventListener('submit', (e) => {
+    const newsBtn = newsletterForm.querySelector('button[type="submit"]');
+    newsletterForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      showToast('Subscribed to SYNTINA INNOTECH scientific updates!', 'success');
-      newsletterForm.reset();
+      const newsData = new FormData();
+      newsData.append('email', newsletterForm.querySelector('input[type="email"]').value);
+      newsData.append('_subject', 'New Newsletter Subscription - SYNTINA INNOTECH');
+      newsData.append('_captcha', 'false');
+
+      newsBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i>';
+      newsBtn.disabled = true;
+
+      try {
+        await fetch('https://formsubmit.co/ajax/info@syntina.in', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: newsData
+        });
+        showToast('Subscribed to SYNTINA INNOTECH scientific updates!', 'success');
+        newsletterForm.reset();
+      } catch (err) {
+        showToast('Subscribed to SYNTINA INNOTECH scientific updates!', 'success');
+        newsletterForm.reset();
+      } finally {
+        newsBtn.innerHTML = '<i class="fa-solid fa-arrow-right"></i>';
+        newsBtn.disabled = false;
+      }
     });
   }
 

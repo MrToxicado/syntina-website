@@ -354,28 +354,30 @@
           <div class="contact-card">
             <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Send a Message</h3>
             <form id="contact-form">
+              <input type="hidden" name="_subject" value="New Contact Inquiry - SYNTINA INNOTECH">
+              <input type="hidden" name="_captcha" value="false">
               <div class="form-group">
                 <label class="form-label">Full Name</label>
-                <input type="text" class="form-input" required placeholder="Dr. Sarah Jenkins">
+                <input type="text" name="name" class="form-input" required placeholder="Dr. Sarah Jenkins">
               </div>
 
               <div class="form-group">
                 <label class="form-label">Organization / Medical Center</label>
-                <input type="text" class="form-input" required placeholder="General Health Research Lab">
+                <input type="text" name="organization" class="form-input" required placeholder="General Health Research Lab">
               </div>
 
               <div class="form-group">
                 <label class="form-label">Email Address</label>
-                <input type="email" class="form-input" required placeholder="sarah.jenkins@lab.org">
+                <input type="email" name="email" class="form-input" required placeholder="sarah.jenkins@lab.org">
               </div>
 
               <div class="form-group">
                 <label class="form-label">Message / Requirement</label>
-                <textarea class="form-textarea" rows="4" required
+                <textarea class="form-textarea" name="message" rows="4" required
                   placeholder="Describe your product or trading requirement..."></textarea>
               </div>
 
-              <button type="submit" class="btn btn-cyan" style="width: 100%;">
+              <button type="submit" id="contact-submit-btn" class="btn btn-cyan" style="width: 100%;">
                 <i class="fa-solid fa-paper-plane"></i> Submit Inquiry
               </button>
             </form>
@@ -396,9 +398,11 @@
       </div>
 
       <form id="quote-form">
+        <input type="hidden" name="_subject" value="New Quotation Request (RFQ) - SYNTINA INNOTECH">
+        <input type="hidden" name="_captcha" value="false">
         <div class="form-group">
           <label class="form-label">Select Equipment / Solution</label>
-          <select class="form-select" id="quote-product-select" required>
+          <select class="form-select" id="quote-product-select" name="product" required>
             <option value="">-- Choose a Product --</option>
             <option value="Horizon H5 Hematology Analyzer">Horizon H5 Automated Hematology Analyzer</option>
             <option value="5424 R Refrigerated Centrifuge">5424 R Precision Refrigerated Centrifuge</option>
@@ -409,26 +413,26 @@
 
         <div class="form-group">
           <label class="form-label">Quantity Needed</label>
-          <input type="number" class="form-input" min="1" value="1" id="quote-qty" required>
+          <input type="number" name="quantity" class="form-input" min="1" value="1" id="quote-qty" required>
         </div>
 
         <div class="form-group">
           <label class="form-label">Your Name</label>
-          <input type="text" class="form-input" required placeholder="John Doe">
+          <input type="text" name="name" class="form-input" required placeholder="Dr. Sarah Jenkins">
         </div>
 
         <div class="form-group">
           <label class="form-label">Institution / Business Email</label>
-          <input type="email" class="form-input" required placeholder="john@hospital.org">
+          <input type="email" name="email" class="form-input" required placeholder="sarah@hospital.org">
         </div>
 
         <div class="form-group">
           <label class="form-label">Special Requirements / Target Date</label>
-          <textarea class="form-textarea" rows="3"
+          <textarea class="form-textarea" name="requirements" rows="3"
             placeholder="Include delivery region or specific compliance standards..."></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width: 100%;">
+        <button type="submit" id="quote-submit-btn" class="btn btn-primary" style="width: 100%;">
           <i class="fa-solid fa-check"></i> Generate Official Quote Request
         </button>
       </form>
