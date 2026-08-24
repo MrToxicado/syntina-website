@@ -11,32 +11,137 @@ document.addEventListener('DOMContentLoaded', () => {
   const products = [
     {
       id: 'p1',
-      title: 'Horizon H5 Automated Hematology Analyzer',
-      category: 'diagnostics',
-      categoryLabel: 'Medical Diagnostics',
-      image: 'images/medical_analyzer.png',
-      badge: 'Bestseller',
-      shortDesc: 'High-throughput 5-part differential automated blood cell counter with integrated touch workstation.',
+      title: 'ChroZen Quaternary HPLC System',
+      category: 'chromatography',
+      categoryLabel: 'Chromatography & HPLC',
+      image: 'images/chrozen_hplc.png',
+      badge: 'Young In Chromass',
+      shortDesc: 'High-performance liquid chromatograph with quaternary pump, autosampler, column oven, and UV/Vis detector.',
       features: [
-        '60 samples/hour throughput',
-        'Laser flow cytometry technology',
-        'Built-in barcode scanner & LIS connectivity'
+        'Flow rate precision: < 0.075% RSD',
+        'Pressure rating: Up to 10,000 psi (700 bar)',
+        'Low system delay volume for gradient accuracy'
       ],
       specs: {
-        'Throughput': '60 samples per hour',
-        'Parameters': '29 reportable parameters + 3 histograms',
-        'Sample Volume': '20 µL whole blood',
-        'Display': '12.1-inch HD capacitive touchscreen',
-        'Data Storage': 'Up to 100,000 patient records'
+        'Manufacturer': 'Young In Chromass (Silex Chrom Partner)',
+        'Pump System': 'Quaternary solvent delivery system',
+        'Flow Rate Range': '0.001 - 10.000 mL/min',
+        'Autosampler Capacity': '120 vials (2 mL standard)',
+        'Detector Wavelength': '190 - 900 nm (Dual wavelength)'
       }
     },
     {
       id: 'p2',
+      title: 'ChroZen High-Performance Gas Chromatograph (GC)',
+      category: 'chromatography',
+      categoryLabel: 'Chromatography & HPLC',
+      image: 'images/chrozen_hplc.png',
+      badge: 'Analytical Instrument',
+      shortDesc: 'Advanced GC instrument equipped with Electronic Flow Control (EFC) and high-sensitivity FID/TCD detectors.',
+      features: [
+        'Pneumatic control accuracy: 0.001 psi',
+        'Fast column oven heating: Up to 120°C/min',
+        'Simultaneous multi-detector operation'
+      ],
+      specs: {
+        'Manufacturer': 'Young In Chromass / Silex Chrom',
+        'Oven Temp Range': 'Ambient +4°C to 450°C',
+        'Detector Types': 'FID, TCD, ECD, NPD, MS/MS',
+        'Injectors': 'Split/Splitless (SSL), Programmable Temp (PTV)',
+        'Control Software': 'ChroZen Clarity Data Station'
+      }
+    },
+    {
+      id: 'p3',
+      title: 'imChem Shaper Hybrid C18 HPLC Column',
+      category: 'chromatography',
+      categoryLabel: 'Chromatography & HPLC',
+      image: 'images/imchem_hplc_column.png',
+      badge: 'imChem Proprietary',
+      shortDesc: 'Ultra-high efficiency silica-hybrid analytical column for challenging pharmaceutical and environmental separations.',
+      features: [
+        'Particle sizes: 3 µm and 5 µm available',
+        'pH stability: 1.5 to 11.5 extended range',
+        'Exceptional peak symmetry for basic compounds'
+      ],
+      specs: {
+        'Brand / Line': 'imChem Shaper Hybrid Surface+',
+        'Dimensions': '4.6 x 150 mm (5 µm) / 2.1 x 100 mm (3 µm)',
+        'Pore Size': '120 Å high surface area',
+        'Endcapping': 'Proprietary organosilane double endcapped',
+        'Max Pressure': '600 bar (8,700 psi)'
+      }
+    },
+    {
+      id: 'p4',
+      title: 'Spark-Evap Rotary Industrial Evaporator System',
+      category: 'lab-instruments',
+      categoryLabel: 'General Lab Instruments',
+      image: 'images/rotary_evaporator.png',
+      badge: 'Spark Scientific',
+      shortDesc: 'Heavy-duty rotary evaporator with motor lift, vertical double spiral glass condenser, and digital heating bath.',
+      features: [
+        '5L heating bath capacity (oil/water)',
+        'Rotation speed: 20 to 280 RPM',
+        'Motorized auto-lift with safety stop'
+      ],
+      specs: {
+        'Brand': 'Spark Scientific Series',
+        'Evaporating Flask': '1L - 5L heavy duty borosilicate 3.3',
+        'Condenser Area': '1,500 cm² double spiral',
+        'Bath Temp Range': 'Ambient to 180°C (±1°C accuracy)',
+        'Vacuum Control': 'Integrated digital vacuum controller'
+      }
+    },
+    {
+      id: 'p5',
+      title: 'Spark Low-Temp Refrigerated Cooling Circulator',
+      category: 'lab-instruments',
+      categoryLabel: 'General Lab Instruments',
+      image: 'images/rotary_evaporator.png',
+      badge: 'Precision Cooling',
+      shortDesc: 'Low-temperature recirculating chiller for rotary evaporators, jacketed reactors, and analytical equipment cooling.',
+      features: [
+        'Temperature range: -20°C to +40°C',
+        'Cooling capacity: 800W at 15°C',
+        'Eco-friendly R290 natural refrigerant'
+      ],
+      specs: {
+        'Brand': 'Spark Scientific Chiller',
+        'Temp Stability': '±0.1°C PID controller',
+        'Bath Volume': '8 Liters stainless steel',
+        'Pump Flow Rate': '20 L/min (0.4 bar max pressure)',
+        'Safety Alerts': 'Low liquid level & over-temp alarms'
+      }
+    },
+    {
+      id: 'p6',
+      title: 'Spark UV-Vis Double Beam Spectrophotometer',
+      category: 'life-sciences',
+      categoryLabel: 'Life Sciences & Molecular',
+      image: 'images/uv_vis_spectrophotometer.png',
+      badge: 'High Resolution',
+      shortDesc: 'Precision double-beam UV-Vis spectrophotometer with 1.0 nm spectral bandwidth for quantitative molecular analysis.',
+      features: [
+        'Wavelength range: 190 nm to 1100 nm',
+        'Double-beam optics with blazed holographic grating',
+        'Built-in 7-inch color touchscreen interface'
+      ],
+      specs: {
+        'Brand': 'Spark Scientific Life Sciences',
+        'Photometric Range': '-0.3 to 3.0 A, 0 to 200% T',
+        'Wavelength Accuracy': '±0.1 nm (at 656.1 nm D2)',
+        'Stray Light': '≤ 0.02% T (at 220 nm NaI)',
+        'Data Export': 'USB, LIS, PC software included'
+      }
+    },
+    {
+      id: 'p7',
       title: '5424 R Precision Refrigerated Centrifuge',
-      category: 'lab',
-      categoryLabel: 'Lab Instrumentation',
+      category: 'lab-instruments',
+      categoryLabel: 'General Lab Instruments',
       image: 'images/lab_centrifuge.png',
-      badge: 'Precision Equipment',
+      badge: 'SYNTINA Premium',
       shortDesc: 'Compact high-speed benchtop microcentrifuge with advanced temperature control system (-11°C to 40°C).',
       features: [
         'Max speed: 15,000 RPM (21,130 × g)',
@@ -52,87 +157,66 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     },
     {
-      id: 'p3',
-      title: 'CytoScan™ Ultra Molecular Reagent Kit',
-      category: 'reagents',
-      categoryLabel: 'Bioscience Reagents',
-      image: 'images/molecular_reagents.png',
-      badge: 'Certified Diagnostic',
-      shortDesc: 'Ready-to-use RT-qPCR mastermix and diagnostic assay kits with 99.9% clinical sensitivity.',
-      features: [
-        'Multiplex detection capability',
-        'Freeze-thaw resistant buffer system',
-        'CE-IVD marked for diagnostic safety'
-      ],
-      specs: {
-        'Assay Format': 'Real-Time PCR Mastermix',
-        'Sensitivity': '99.9% clinical accuracy',
-        'Storage Temp': '-20°C (Cold-chain verified)',
-        'Pack Size': '100 tests per box',
-        'Shelf Life': '24 months from manufacture'
-      }
-    },
-    {
-      id: 'p4',
-      title: 'Sonoflex HD Portable Ultrasound System',
-      category: 'pointofcare',
-      categoryLabel: 'Point of Care',
+      id: 'p8',
+      title: 'Horizon H5 Automated Hematology Analyzer',
+      category: 'life-sciences',
+      categoryLabel: 'Life Sciences & Molecular',
       image: 'images/medical_analyzer.png',
-      badge: 'New Arrival',
-      shortDesc: 'High-definition digital portable ultrasound with multi-frequency cardiac and abdominal probes.',
+      badge: 'Clinical Grade',
+      shortDesc: 'High-throughput 5-part differential automated blood cell counter with integrated touch workstation.',
       features: [
-        'Color Doppler imaging engine',
-        'Dual battery bay with 4-hr battery life',
-        'DICOM 3.0 cloud export'
+        '60 samples/hour throughput',
+        'Laser flow cytometry technology',
+        'Built-in barcode scanner & LIS connectivity'
       ],
       specs: {
-        'Display': '15.6-inch anti-glare LED monitor',
-        'Probes Included': 'Convex, Linear & Cardiac Phased Array',
-        'Imaging Modes': 'B, 2B, 4B, M, Color, Power Doppler, PDI',
-        'Weight': '5.8 kg ultra-portable',
-        'Storage': '512GB High-speed SSD'
+        'Throughput': '60 samples per hour',
+        'Parameters': '29 reportable parameters + 3 histograms',
+        'Sample Volume': '20 µL whole blood',
+        'Display': '12.1-inch HD capacitive touchscreen',
+        'Data Storage': 'Up to 100,000 patient records'
       }
     },
     {
-      id: 'p5',
-      title: 'CryoShield -86°C Ultra-Low Temp Freezer',
-      category: 'lab',
-      categoryLabel: 'Lab Instrumentation',
-      image: 'images/lab_centrifuge.png',
-      badge: 'Energy Efficient',
-      shortDesc: 'Medical-grade ultra-low temperature freezer engineered for biological sample preservation.',
-      features: [
-        'Dual cascade refrigeration system',
-        'VIP Vacuum Insulation Panels',
-        'Remote GSM temperature alarm & monitor'
-      ],
-      specs: {
-        'Capacity': '728 Liters (500 micro-boxes)',
-        'Temp Range': '-40°C to -86°C',
-        'Power Cons.': '10.2 kWh/day',
-        'Security': 'Biometric fingerprint + key lock',
-        'Backup System': 'CO2 / LN2 backup ready'
-      }
-    },
-    {
-      id: 'p6',
-      title: 'GeneFlow™ Fast Respiratory Panel Reagents',
-      category: 'reagents',
-      categoryLabel: 'Bioscience Reagents',
+      id: 'p9',
+      title: 'Pharmacopoeia Reference Standards & Reagents (BP/USP/EDQM)',
+      category: 'glassware-reagents',
+      categoryLabel: 'Glassware & Reagents',
       image: 'images/molecular_reagents.png',
-      badge: 'Rapid Diagnostic',
-      shortDesc: 'Comprehensive multiplex reagent cartridge for 21 viral & bacterial respiratory pathogen targets.',
+      badge: 'Certified Reference',
+      shortDesc: 'Official Pharmacopoeia reference standards, HPLC grade solvents, and high-purity analytical laboratory chemicals.',
       features: [
-        'Results in under 45 minutes',
-        'Lyophilized room-temp stable reagents',
-        'Zero cross-reactivity certified'
+        'Certified purity with COA documentation',
+        'British Pharmacopoeia (BP) & USP reference standards',
+        'Ultra-pure HPLC & LC-MS grade solvents'
       ],
       specs: {
-        'Target Count': '21 pathogens in single sample',
-        'Sample Type': 'Nasal swab or sputum',
-        'Turnaround Time': '42 minutes',
-        'Format': 'Pre-loaded single-use cartridges',
-        'Validation': 'ISO 13485 & FDA 510(k) cleared'
+        'Distributor': 'Ketan Scientific & imChem Partner',
+        'Standards Available': 'USP, BP, EDQM, EP, TRC',
+        'Purity Level': '≥ 99.8% ACS / HPLC Grade',
+        'Documentation': 'CoA, MSDS, Certificate of Analysis included',
+        'Packaging': 'Amber glass bottles / nitrogen sealed ampoules'
+      }
+    },
+    {
+      id: 'p10',
+      title: 'imChem SPE Cartridges & Syringe Filter Sample Prep Kits',
+      category: 'sample-prep',
+      categoryLabel: 'Sample Prep & Consumables',
+      image: 'images/imchem_hplc_column.png',
+      badge: 'Sample Preparation',
+      shortDesc: 'Solid Phase Extraction (SPE) silica/polymer cartridges, PTFE/Nylon syringe filters, and micro-vials.',
+      features: [
+        'Polymeric & C18 SPE cartridges (100mg - 1000mg)',
+        '0.22 µm and 0.45 µm syringe filters',
+        'PFAS-free micro-vials & caps for trace analysis'
+      ],
+      specs: {
+        'Brands Available': 'imChem, Silex Chrom, HALO®, Inertsil',
+        'Filter Diameters': '13 mm, 25 mm, 33 mm',
+        'Membranes': 'PTFE, Nylon, PVDF, PES, Cellulose Acetate',
+        'Cartridge Formats': '1 mL, 3 mL, 6 mL extraction columns',
+        'Vial Types': '2 mL Crimp/Screw vials with PTFE/Silicone septa'
       }
     }
   ];
