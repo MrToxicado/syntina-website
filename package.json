@@ -1,0 +1,17 @@
+{
+  "name": "syntina-website",
+  "version": "1.0.0",
+  "description": "SYNTINA INNOTECH Official Website",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static site ready'"
+  },
+  "keywords": [
+    "syntina",
+    "scientific",
+    "hplc",
+    "chromatography"
+  ],
+  "author": "SYNTINA INNOTECH",
+  "license": "ISC"
+}
