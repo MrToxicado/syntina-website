@@ -74,11 +74,11 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 'p4',
-      title: 'Spark-Evap Rotary Industrial Evaporator System',
+      title: 'Rotary Industrial Evaporator System',
       category: 'lab-instruments',
       categoryLabel: 'General Lab Instruments',
       image: 'images/rotary_evaporator.png',
-      badge: 'Spark Scientific',
+      badge: 'Lab Equipment',
       shortDesc: 'Heavy-duty rotary evaporator with motor lift, vertical double spiral glass condenser, and digital heating bath.',
       features: [
         '5L heating bath capacity (oil/water)',
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Motorized auto-lift with safety stop'
       ],
       specs: {
-        'Brand': 'Spark Scientific Series',
+        'Series': 'Industrial Evaporator Series',
         'Evaporating Flask': '1L - 5L heavy duty borosilicate 3.3',
         'Condenser Area': '1,500 cm² double spiral',
         'Bath Temp Range': 'Ambient to 180°C (±1°C accuracy)',
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 'p5',
-      title: 'Spark Low-Temp Refrigerated Cooling Circulator',
+      title: 'Low-Temp Refrigerated Cooling Circulator',
       category: 'lab-instruments',
       categoryLabel: 'General Lab Instruments',
       image: 'images/rotary_evaporator.png',
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Eco-friendly R290 natural refrigerant'
       ],
       specs: {
-        'Brand': 'Spark Scientific Chiller',
+        'Series': 'Refrigerated Chiller Series',
         'Temp Stability': '±0.1°C PID controller',
         'Bath Volume': '8 Liters stainless steel',
         'Pump Flow Rate': '20 L/min (0.4 bar max pressure)',
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 'p6',
-      title: 'Spark UV-Vis Double Beam Spectrophotometer',
+      title: 'UV-Vis Double Beam Spectrophotometer',
       category: 'life-sciences',
       categoryLabel: 'Life Sciences & Molecular',
       image: 'images/uv_vis_spectrophotometer.png',
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Built-in 7-inch color touchscreen interface'
       ],
       specs: {
-        'Brand': 'Spark Scientific Life Sciences',
+        'Series': 'Life Sciences Spectrophotometry Series',
         'Photometric Range': '-0.3 to 3.0 A, 0 to 200% T',
         'Wavelength Accuracy': '±0.1 nm (at 656.1 nm D2)',
         'Stray Light': '≤ 0.02% T (at 220 nm NaI)',
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Ultra-pure HPLC & LC-MS grade solvents'
       ],
       specs: {
-        'Distributor': 'Ketan Scientific & imChem Partner',
+        'Distributor': 'imChem & Global Partners',
         'Standards Available': 'USP, BP, EDQM, EP, TRC',
         'Purity Level': '≥ 99.8% ACS / HPLC Grade',
         'Documentation': 'CoA, MSDS, Certificate of Analysis included',
@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'PFAS-free micro-vials & caps for trace analysis'
       ],
       specs: {
-        'Brands Available': 'imChem, Silex Chrom, HALO®, Inertsil',
+        'Brands Available': 'imChem, Silex Chrom, Inertsil',
         'Filter Diameters': '13 mm, 25 mm, 33 mm',
         'Membranes': 'PTFE, Nylon, PVDF, PES, Cellulose Acetate',
         'Cartridge Formats': '1 mL, 3 mL, 6 mL extraction columns',
