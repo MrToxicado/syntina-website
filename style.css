@@ -1133,7 +1133,7 @@ h6 {
    ========================================================================== */
 .partners-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.5rem;
 }
 
@@ -1218,12 +1218,6 @@ h6 {
   color: #60a5fa;
   padding: 0.25rem 0.65rem;
   border-radius: 20px;
-}
-
-@media (max-width: 1024px) {
-  .partners-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 640px) {

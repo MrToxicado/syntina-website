@@ -10,48 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Product Database
   const products = [
     {
-      id: 'p1',
-      title: 'ChroZen Quaternary HPLC System',
-      category: 'chromatography',
-      categoryLabel: 'Chromatography & HPLC',
-      image: 'images/chrozen_hplc.png',
-      badge: 'Young In Chromass',
-      shortDesc: 'High-performance liquid chromatograph with quaternary pump, autosampler, column oven, and UV/Vis detector.',
-      features: [
-        'Flow rate precision: < 0.075% RSD',
-        'Pressure rating: Up to 10,000 psi (700 bar)',
-        'Low system delay volume for gradient accuracy'
-      ],
-      specs: {
-        'Manufacturer': 'Young In Chromass (Silex Chrom Partner)',
-        'Pump System': 'Quaternary solvent delivery system',
-        'Flow Rate Range': '0.001 - 10.000 mL/min',
-        'Autosampler Capacity': '120 vials (2 mL standard)',
-        'Detector Wavelength': '190 - 900 nm (Dual wavelength)'
-      }
-    },
-    {
-      id: 'p2',
-      title: 'ChroZen High-Performance Gas Chromatograph (GC)',
-      category: 'chromatography',
-      categoryLabel: 'Chromatography & HPLC',
-      image: 'images/chrozen_hplc.png',
-      badge: 'Analytical Instrument',
-      shortDesc: 'Advanced GC instrument equipped with Electronic Flow Control (EFC) and high-sensitivity FID/TCD detectors.',
-      features: [
-        'Pneumatic control accuracy: 0.001 psi',
-        'Fast column oven heating: Up to 120°C/min',
-        'Simultaneous multi-detector operation'
-      ],
-      specs: {
-        'Manufacturer': 'Young In Chromass / Silex Chrom',
-        'Oven Temp Range': 'Ambient +4°C to 450°C',
-        'Detector Types': 'FID, TCD, ECD, NPD, MS/MS',
-        'Injectors': 'Split/Splitless (SSL), Programmable Temp (PTV)',
-        'Control Software': 'ChroZen Clarity Data Station'
-      }
-    },
-    {
       id: 'p3',
       title: 'imChem Shaper Hybrid C18 HPLC Column',
       category: 'chromatography',
